@@ -1,61 +1,61 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="This is a student registration form website. It is a responsive website.">
-    <meta name="author" content="Rahul Kumawat">
-    <title>Student Registration Form</title>
-    <link rel="stylesheet" href="style.css">
+  <title>Student Registration Form</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-    <header class="header">
-        <h1>Student Registration Form</h1>
-    </header>
-    <main class="main">
-        <form method="post" class="form">
-            <div class="form-card">
-                <label for="fullname">Full Name</label>
-                <input autocomplete="name" type="text" name="fullname" id="fullname" placeholder="Enter Your Name" maxlength="30" required>
-                <label for="email">Email</label>
-                <input autocomplete="email" type="email" name="email" id="email" placeholder="Enter Your Email" required>
-                <label for="number">Phone Number</label>
-                <input autocomplete="tel" type="tel" inputmode="numeric" name="number" id="number" placeholder="Enter Your Phone Number" maxlength="10"
-                    pattern="[0-9]{10}" required>
-                <label for="dob">Date Of Birth</label>
-                <input type="date" name="dob" id="dob" required>
-                <label for="gender">Gender</label><br><br>
-                <input type="radio" name="gender" id="male" value="male" required> <label for="male">Male</label>
-                <input type="radio" name="gender" id="female" value="female" required> <label for="female">Female</label>
-                <input type="radio" name="gender" id="other" value="other" required> <label for="other">Other</label>
-                <br><br><label for="course">Course</label>
-                <select name="course" id="course" required>
-                    <option value="" selected disabled>Select Course</option>
-                    <option value="BCA">BCA</option>
-                    <option value="B.Tech">B.Tech</option>
-                    <option value="b.sc">B.Sc</option>
-                    <option value="BA">BA</option>
-                </select>
-                <label for="address">Address</label>
-                <textarea name="address" id="address" required rows="4" cols="30"
-                    placeholder="Enter Your Address"></textarea>
-                <label for="password">Password</label>
-                <input type="password" name="password" id="password" placeholder="Enter Your Password" maxlength="20" minlength="8"
-                    required>
-                <label for="confirm">Confirm Password</label>
-                <input type="password" name="confirm" id="confirm" placeholder="Confirm Password" maxlength="20" minlength="8"
-                    required>
-                <input type="checkbox" name="terms" id="terms" required><label for="terms">I agree to Terms &
-                    Conditions</label>
-                <div class="buttons">
-                    <button type="submit">Register</button>
-                    <button type="reset">Reset</button>
-                </div>
-            </div>
-        </form>
-    </main>
+  <header>
+    <h1>Student Registration Form</h1>
+    <p>Fill the form to register yourself.</p>
+  </header>
+  <main>
+    <section>
+      <form id="registrationForm">
+        <label for="name">Full Name:</label>
+        <input name="name" type="text" id="name" placeholder="Enter Your Name" maxlength="15" /><br /><br />
+        <label for="email">Email:</label>
+        <input name="email" type="email" id="email" placeholder="Enter Your Email"  /><br /><br />
+        <label for="password">Password:</label>
+        <input name="password" type="password" id="password" placeholder="Enter Your Password"  /><br /><br />
+        <label for="phone">Phone Number:</label>
+        <input name="phone" id="phone" type="tel" placeholder="Enter Your Phone Number" maxlength="10"
+          pattern="[0-9]{10}"  /><br /><br />
+        <label for="dob">Date Of Birth:</label><br />
+        <input name="dob" type="date" id="dob"  /><br /><br />
+        <label for="gender">Gender:</label><br />
+        <input type="radio" name="gender" value="male"  />Male <br />
+        <input type="radio" name="gender" value="female"  />Female <br />
+        <input type="radio" name="gender" value="other"> other <br><br>
+
+        <label for="course">Course:</label><br />
+        <select id="course" name="course" >
+          <option value="" selected disabled>Select Course</option>
+          <option>BCA</option>
+          <option>B.Tech</option>
+          <option>B.Com</option>
+        </select><br /><br />
+
+        <label for="hobbies">Hobbies:</label><br />
+        <input name="coding" type="checkbox" id="coding" />
+        <label for="coding"> Coding </label><br />
+        <input name="cricket" type="checkbox" id="cricket" />
+        <label for="cricket"> Cricket </label><br />
+        <input name="music" type="checkbox" id="music" /> <label for="music"> Music </label><br />
+        <br />
+        <label for="address">Address:</label><br />
+        <textarea id="address" name="address" rows="4" cols="30" placeholder="Enter Your Address" ></textarea>
+        <br />
+        <button type="submit">Register</button>
+      </form>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2026 Student Form</p>
+  </footer>
+  <script src="script.js"></script>
 </body>
 
 </html>
